@@ -1,0 +1,125 @@
+// -*- mode: json -*-
+
+{
+  "layer": "top",
+  "position": "bottom",
+
+  "modules-left": [
+    "custom/power",
+    "user",
+    "clock"
+  ],
+  "modules-center": [
+    "custom/workspace-left",
+    "hyprland/workspaces",
+    "custom/workspace-right"
+  ],
+  "modules-right": [
+    "custom/spotify",
+    "pulseaudio",
+    "memory",
+    "cpu"
+  ],
+
+  "custom/div": {
+    "format": " ⎸",
+    "tooltip": false
+  },
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "format": "{name}"
+  },
+
+  "clock": {
+    "format": "{:%I:%M:%S %p}",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume:2}%",
+    "format-bluetooth": "o^o {volume}% o^o",
+    "format-muted": "MUTE",
+    "format-icons": {
+      "headphones": "o^o",
+      "default": [
+        "◀)))",
+        "◀)))"
+      ]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+  "memory": {
+    "interval": 5,
+    "format": "Mem {}%"
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "CPU {usage:2}%"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "disk": {
+    "interval": 5,
+    "format": "Disk {percentage_used:2}%",
+    "path": "/"
+  },
+  "tray": {
+    "icon-size": 20
+  },
+  
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+             "*": [1,2,3,4,5,6] // 5 workspaces by default on every monitor
+       },
+      //  "format-icons": {
+      //   "default" : "{id}",
+      //   "active" : "O"
+      //  }
+
+	},
+
+  "custom/spotify": {
+    "exec": "/usr/bin/python3 /home/<usr>/.config/waybar/mediaplayer.py --player spotify",
+    "format": "{}",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+
+  "custom/power": {
+    "format": "PWR/RBT",
+    "on-click": "shutdown now",
+    "on-click-right" : "reboot"
+  },
+
+  "user": {
+    "interval": 5,
+    "icon": false,
+    "on-click": "thunar"
+  },
+
+  "custom/workspace-right": {
+    "format": "▶",
+    "on-click": "hyprctl dispatch workspace +1"
+  },
+
+  "custom/workspace-left": {
+    "format": "◀",
+    "on-click": "hyprctl dispatch workspace -1"
+  }
+}

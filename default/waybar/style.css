@@ -1,0 +1,100 @@
+* {
+  font-size: 20px;
+  font-family: monospace;
+}
+
+window#waybar {
+  background: rgba(0,0,0,0);
+}
+
+
+
+#user,
+#custom-spotify,
+#custom-power,
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk,
+#custom-workspace-right,
+#custom-workspace-left,
+#tray {
+  border-color: #00CC00;
+  border-width: 2px;
+  border-style: solid;
+  color: #00CC00;
+  border-radius: 10px;
+  margin:0 5px;
+  background-color: rgba(0, 128, 0, 0.25);
+
+}
+
+/* #workspaces button {
+  padding: 0 2px;
+  color: #fdf6e3;
+}
+#workspaces button.focused {
+  color: #268bd2;
+}
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+#workspaces button:hover {
+  background: #1a1a1a;
+  border: #1a1a1a;
+  padding: 0 3px;
+} */
+
+/* #pulseaudio {
+  color: #268bd2;
+}
+#memory {
+  color: #2aa198;
+}
+#cpu {
+  color: #6c71c4;
+}
+#battery {
+  color: #859900;
+}
+#disk {
+  color: #b58900;
+} */
+
+#clock,
+#user,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#custom-power,
+#custom-spotify,
+#custom-workspace-right,
+#custom-workspace-left,
+#disk {
+  padding: 0 10px;
+}
+
+#workspaces button {
+  border-color: #00CC00;
+  border-width: 2px;
+  border-style: solid;
+  color: #00CC00;
+  border-radius: 10px;
+  margin:0 5px;
+  background-color: rgba(0, 128, 0, 0.5);
+
+}
+
+
+#workspaces button.empty {
+  background-color: rgba(0, 128, 0, 0.25);
+
+}
+
+#workspaces button.active {
+  background-color: rgba(0, 128, 0, 0.75);
+}
